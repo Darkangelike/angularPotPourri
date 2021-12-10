@@ -1,0 +1,21 @@
+<form (submit)="authenticate()">
+  <label for="email" placeholder="Email">Username</label>
+  <input
+    type="email"
+    id="email"
+    value="isabelle@hb.fr"
+    [(ngModel)]="email"
+    name="email"
+    required
+  />
+  <label for="password">Password</label>
+  <input
+    type="password"
+    id="paddword"
+    value="michaeng"
+    [(ngModel)]="password"
+    name="password"
+    required
+  />
+  <input type="submit" />
+</form>

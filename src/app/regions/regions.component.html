@@ -1,0 +1,36 @@
+<h1>List of regions:</h1>
+
+<form (ngSubmit)="sendRequest()">
+  <label for="regions">Régions</label>
+  <input
+    type="radio"
+    name="requestType"
+    value="regions"
+    id="regions"
+    [(ngModel)]="searchType"
+  />
+  <label for="departements">Départements</label>
+  <input
+    type="radio"
+    name="requestType"
+    value="departements"
+    id="departements"
+    [(ngModel)]="searchType"
+  />
+  <label for="communes">Communes</label>
+  <input
+    type="radio"
+    name="requestType"
+    value="communes"
+    id="communes"
+    [(ngModel)]="searchType"
+  />
+  <label for="request"></label><input type="text" id="request" />
+  <input type="submit" value="Search" />
+</form>
+
+<div *ngIf="tabRegions">
+  <div *ngFor="let region of tabRegions">
+    {{ region.nom }} {{ region.code }}
+  </div>
+</div>
